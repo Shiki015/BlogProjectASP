@@ -1,0 +1,9 @@
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Domain\bin\Debug\netcoreapp3.1\BlogProject.Domain.deps.json
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Domain\bin\Debug\netcoreapp3.1\BlogProject.Domain.dll
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Domain\bin\Debug\netcoreapp3.1\BlogProject.Domain.pdb
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Domain\obj\Debug\netcoreapp3.1\BlogProject.Domain.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Domain\obj\Debug\netcoreapp3.1\BlogProject.Domain.AssemblyInfo.cs
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Domain\obj\Debug\netcoreapp3.1\BlogProject.Domain.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Domain\obj\Debug\netcoreapp3.1\BlogProject.Domain.dll
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Domain\obj\Debug\netcoreapp3.1\BlogProject.Domain.pdb
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Domain\obj\Debug\netcoreapp3.1\BlogProject.Domain.csproj.AssemblyReference.cache

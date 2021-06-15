@@ -1,0 +1,16 @@
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Implementation\bin\Debug\netcoreapp3.1\BlogProject.Implementation.deps.json
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Implementation\bin\Debug\netcoreapp3.1\BlogProject.Implementation.dll
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Implementation\bin\Debug\netcoreapp3.1\BlogProject.Implementation.pdb
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Implementation\obj\Debug\netcoreapp3.1\BlogProject.Implementation.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Implementation\obj\Debug\netcoreapp3.1\BlogProject.Implementation.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Implementation\obj\Debug\netcoreapp3.1\BlogProject.Implementation.AssemblyInfo.cs
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Implementation\obj\Debug\netcoreapp3.1\BlogProject.Implementation.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Implementation\obj\Debug\netcoreapp3.1\BlogProject.Implementation.dll
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Implementation\obj\Debug\netcoreapp3.1\BlogProject.Implementation.pdb
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Implementation\bin\Debug\netcoreapp3.1\BlogProject.Application.dll
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Implementation\bin\Debug\netcoreapp3.1\BlogProject.DataAccess.dll
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Implementation\bin\Debug\netcoreapp3.1\BlogProject.Domain.dll
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Implementation\bin\Debug\netcoreapp3.1\BlogProject.Application.pdb
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Implementation\bin\Debug\netcoreapp3.1\BlogProject.DataAccess.pdb
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Implementation\bin\Debug\netcoreapp3.1\BlogProject.Domain.pdb
+C:\Users\HP\source\repos\BlogProject.Api\BlogProject.Implementation\obj\Debug\netcoreapp3.1\BlogProject.Implementation.csproj.CopyComplete

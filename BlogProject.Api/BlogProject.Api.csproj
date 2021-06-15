@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\9113ab4c-28a0-43bf-81df-484e7e5753c8.jpg" />
+    <None Include="wwwroot\images\c7bf8bb8-7f08-4ded-b94f-460e01ffe978.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.16" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.11.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlogProject.Application\BlogProject.Application.csproj" />
+    <ProjectReference Include="..\BlogProject.DataAccess\BlogProject.DataAccess.csproj" />
+    <ProjectReference Include="..\BlogProject.Implementation\BlogProject.Implementation.csproj" />
+  </ItemGroup>
+
+
+</Project>
