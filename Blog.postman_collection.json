@@ -1,0 +1,1118 @@
+{
+	"info": {
+		"_postman_id": "d5432123-c8ef-4006-a4cc-0db08acbb1d2",
+		"name": "Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "RegisterUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ProfilePhoto",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/stefan.jpg"
+								},
+								{
+									"key": "Username",
+									"value": "User26",
+									"type": "text"
+								},
+								{
+									"key": "Password",
+									"value": "sifra1",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "mail26@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Username\": \"stefan\",\n    \"Password\": \"sifra24\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AdminGetUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Bearer",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiNjRkMzU4YS04YjZjLTRhMjItOTQ5Ny0yN2MxODFiZGI1OGUiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTYyMzM0Nzc3OSwiVXNlcklkIjoiMjMiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIzLFwiSWRlbnRpdHlcIjpcIlVzZXIyNFwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzE2LDE3LDE4LDIwLDMwLDMxLDMyLDMzLDM1LDQyLDQzLDQ1LDQwMF19IiwibmJmIjoxNjIzMzQ3NzgwLCJleHAiOjE2MjMzNDg5MTAsImF1ZCI6IkFueSJ9.lhIUOkI6MZ-7XZd3Ujcb3EMCnA8Ml-UmkSJdWOVnWUw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:42499/api/Admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "42499",
+							"path": [
+								"api",
+								"Admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FrontGetUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0ZWFkMTMwMS0yZmI2LTRmZTItOTcyNi1jMjc5OTljNGI4NmYiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTYyMzM0OTI3MiwiVXNlcklkIjoiMjIiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIyLFwiSWRlbnRpdHlcIjpcInN0ZWZhblwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzE2LDE3LDE4LDIwLDMwLDMxLDMyLDMzLDM1LDQyLDQzLDQ1LDQwMCwxMCwxMSwxMiwxMywxNCwyMiwyMywyNCwzNCw0NCw3MDAsNzAxXX0iLCJuYmYiOjE2MjMzNDkyNzIsImV4cCI6MTYyMzM1MDQwMiwiYXVkIjoiQW55In0.RvLwMBlNTKNNxqqRLAcWZaet53dUXVrrVQSm2IGDkw0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/User",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"User"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AdminAddUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0ZWFkMTMwMS0yZmI2LTRmZTItOTcyNi1jMjc5OTljNGI4NmYiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTYyMzM0OTI3MiwiVXNlcklkIjoiMjIiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIyLFwiSWRlbnRpdHlcIjpcInN0ZWZhblwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzE2LDE3LDE4LDIwLDMwLDMxLDMyLDMzLDM1LDQyLDQzLDQ1LDQwMCwxMCwxMSwxMiwxMywxNCwyMiwyMywyNCwzNCw0NCw3MDAsNzAxXX0iLCJuYmYiOjE2MjMzNDkyNzIsImV4cCI6MTYyMzM1MDQwMiwiYXVkIjoiQW55In0.RvLwMBlNTKNNxqqRLAcWZaet53dUXVrrVQSm2IGDkw0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ProfilePhoto",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/stefan.jpg"
+								},
+								{
+									"key": "Username",
+									"value": "User912",
+									"type": "text"
+								},
+								{
+									"key": "Password",
+									"value": "sifra24",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "mail912@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "UserUseCases[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserUseCases[]",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AdminUpdateUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0ZWFkMTMwMS0yZmI2LTRmZTItOTcyNi1jMjc5OTljNGI4NmYiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTYyMzM0OTI3MiwiVXNlcklkIjoiMjIiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIyLFwiSWRlbnRpdHlcIjpcInN0ZWZhblwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzE2LDE3LDE4LDIwLDMwLDMxLDMyLDMzLDM1LDQyLDQzLDQ1LDQwMCwxMCwxMSwxMiwxMywxNCwyMiwyMywyNCwzNCw0NCw3MDAsNzAxXX0iLCJuYmYiOjE2MjMzNDkyNzIsImV4cCI6MTYyMzM1MDQwMiwiYXVkIjoiQW55In0.RvLwMBlNTKNNxqqRLAcWZaet53dUXVrrVQSm2IGDkw0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ProfilePhoto",
+									"type": "file",
+									"src": "/C:/Users/HP/Pictures/slika1.png"
+								},
+								{
+									"key": "Username",
+									"value": "User912",
+									"type": "text"
+								},
+								{
+									"key": "Password",
+									"value": "sifra24",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "user912@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "UserUseCases[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UserUseCases[]",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "UserUseCases[]",
+									"value": "33",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Admin/26",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Admin",
+								"26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUserPersonal",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyODNhMWExZi0zZmYzLTQ3MzktYjg4Yi1jZGFhNzRkZmI5NWEiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTU5MzIxODAzNywiVXNlcklkIjoiOSIsIkFjdG9yRGF0YSI6IntcIklkXCI6OSxcIklkZW50aXR5XCI6XCJVc2VyMlwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzEsMTYsMywzMl19IiwibmJmIjoxNTkzMjE4MDM3LCJleHAiOjE1OTMyMTgxNjcsImF1ZCI6IkFueSJ9.nJHvN6GeQHEujU307MUS0vg4WiSrqlJ0GmGK44-FZsM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ProfilePhoto",
+									"type": "file",
+									"src": "/Users/flippy/dev/Blog/external-content.duckduckgo.jpg",
+									"disabled": true
+								},
+								{
+									"key": "Username",
+									"value": "User2",
+									"type": "text"
+								},
+								{
+									"key": "Password",
+									"value": "sifra1",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "mail2@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:54167/api/User/9",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "54167",
+							"path": [
+								"api",
+								"User",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AdminDeleteUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0ZWFkMTMwMS0yZmI2LTRmZTItOTcyNi1jMjc5OTljNGI4NmYiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTYyMzM0OTI3MiwiVXNlcklkIjoiMjIiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIyLFwiSWRlbnRpdHlcIjpcInN0ZWZhblwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzE2LDE3LDE4LDIwLDMwLDMxLDMyLDMzLDM1LDQyLDQzLDQ1LDQwMCwxMCwxMSwxMiwxMywxNCwyMiwyMywyNCwzNCw0NCw3MDAsNzAxXX0iLCJuYmYiOjE2MjMzNDkyNzIsImV4cCI6MTYyMzM1MDQwMiwiYXVkIjoiQW55In0.RvLwMBlNTKNNxqqRLAcWZaet53dUXVrrVQSm2IGDkw0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Admin/25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Admin",
+								"25"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOneUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0ZWFkMTMwMS0yZmI2LTRmZTItOTcyNi1jMjc5OTljNGI4NmYiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTYyMzM0OTI3MiwiVXNlcklkIjoiMjIiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIyLFwiSWRlbnRpdHlcIjpcInN0ZWZhblwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzE2LDE3LDE4LDIwLDMwLDMxLDMyLDMzLDM1LDQyLDQzLDQ1LDQwMCwxMCwxMSwxMiwxMywxNCwyMiwyMywyNCwzNCw0NCw3MDAsNzAxXX0iLCJuYmYiOjE2MjMzNDkyNzIsImV4cCI6MTYyMzM1MDQwMiwiYXVkIjoiQW55In0.RvLwMBlNTKNNxqqRLAcWZaet53dUXVrrVQSm2IGDkw0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/User/22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"User",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AdminGetOneUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0ZWFkMTMwMS0yZmI2LTRmZTItOTcyNi1jMjc5OTljNGI4NmYiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTYyMzM0OTI3MiwiVXNlcklkIjoiMjIiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIyLFwiSWRlbnRpdHlcIjpcInN0ZWZhblwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzE2LDE3LDE4LDIwLDMwLDMxLDMyLDMzLDM1LDQyLDQzLDQ1LDQwMCwxMCwxMSwxMiwxMywxNCwyMiwyMywyNCwzNCw0NCw3MDAsNzAxXX0iLCJuYmYiOjE2MjMzNDkyNzIsImV4cCI6MTYyMzM1MDQwMiwiYXVkIjoiQW55In0.RvLwMBlNTKNNxqqRLAcWZaet53dUXVrrVQSm2IGDkw0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Admin/22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Admin",
+								"22"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "AddCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Cat4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:54167/api/Category",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "54167",
+							"path": [
+								"api",
+								"Category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCategories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0ZWFkMTMwMS0yZmI2LTRmZTItOTcyNi1jMjc5OTljNGI4NmYiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTYyMzM0OTI3MiwiVXNlcklkIjoiMjIiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIyLFwiSWRlbnRpdHlcIjpcInN0ZWZhblwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzE2LDE3LDE4LDIwLDMwLDMxLDMyLDMzLDM1LDQyLDQzLDQ1LDQwMCwxMCwxMSwxMiwxMywxNCwyMiwyMywyNCwzNCw0NCw3MDAsNzAxXX0iLCJuYmYiOjE2MjMzNDkyNzIsImV4cCI6MTYyMzM1MDQwMiwiYXVkIjoiQW55In0.RvLwMBlNTKNNxqqRLAcWZaet53dUXVrrVQSm2IGDkw0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Category?name=cat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Category"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "cat"
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0ZWFkMTMwMS0yZmI2LTRmZTItOTcyNi1jMjc5OTljNGI4NmYiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTYyMzM0OTI3MiwiVXNlcklkIjoiMjIiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIyLFwiSWRlbnRpdHlcIjpcInN0ZWZhblwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzE2LDE3LDE4LDIwLDMwLDMxLDMyLDMzLDM1LDQyLDQzLDQ1LDQwMCwxMCwxMSwxMiwxMywxNCwyMiwyMywyNCwzNCw0NCw3MDAsNzAxXX0iLCJuYmYiOjE2MjMzNDkyNzIsImV4cCI6MTYyMzM1MDQwMiwiYXVkIjoiQW55In0.RvLwMBlNTKNNxqqRLAcWZaet53dUXVrrVQSm2IGDkw0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"New Name 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Category/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Category",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:54167/api/Category/dasdas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "54167",
+							"path": [
+								"api",
+								"Category",
+								"dasdas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "GetPosts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiMzhlYWMyMS1jMDcxLTRhZjUtYmE0ZC1jOTMxYmI3YjMzZjYiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTYyMzQxMzA1OCwiVXNlcklkIjoiMjIiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIyLFwiSWRlbnRpdHlcIjpcInN0ZWZhblwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzE2LDE3LDE4LDIwLDMwLDMxLDMyLDMzLDM1LDQyLDQzLDQ1LDQwMCwxMCwxMSwxMiwxMywxNCwyMiwyMywyNCwzNCw0NCw3MDAsNzAxXX0iLCJuYmYiOjE2MjM0MTMwNTgsImV4cCI6MTYyMzQxNDE4OCwiYXVkIjoiQW55In0.haEtzSOyGVswi0CjfdZzKGHBdhTSc6KS-w5KV64kGGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxYzc1NDIwNy0zNTY2LTQ5NzMtOWU5OS00OTc4YzdlMzYxNzYiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTU5MzYwOTczNCwiVXNlcklkIjoiMjMiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIzLFwiSWRlbnRpdHlcIjpcIlBlcmljXCIsXCJBbGxvd2VkVXNlQ2FzZXNcIjpbMTYsMTcsMTgsMjAsMzAsMzEsMzIsMzMsMzUsNDIsNDMsNDUsNDAwXX0iLCJuYmYiOjE1OTM2MDk3MzQsImV4cCI6MTU5MzYxMDg2NCwiYXVkIjoiQW55In0.bXNlao3sOrhsSQiiof-yJM36N8-08CCTWUSZxt9XC7w"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/post?perpage=25&DateFrom=2021-05-01&DateTo=2021-06-09",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"post"
+							],
+							"query": [
+								{
+									"key": "perpage",
+									"value": "25"
+								},
+								{
+									"key": "page",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "keyword",
+									"value": "Use",
+									"disabled": true
+								},
+								{
+									"key": "DateFrom",
+									"value": "2021-05-01"
+								},
+								{
+									"key": "DateTo",
+									"value": "2021-06-09"
+								},
+								{
+									"key": "CategoryIds",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "CategoryIds",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOnePost",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiMzhlYWMyMS1jMDcxLTRhZjUtYmE0ZC1jOTMxYmI3YjMzZjYiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTYyMzQxMzA1OCwiVXNlcklkIjoiMjIiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIyLFwiSWRlbnRpdHlcIjpcInN0ZWZhblwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzE2LDE3LDE4LDIwLDMwLDMxLDMyLDMzLDM1LDQyLDQzLDQ1LDQwMCwxMCwxMSwxMiwxMywxNCwyMiwyMywyNCwzNCw0NCw3MDAsNzAxXX0iLCJuYmYiOjE2MjM0MTMwNTgsImV4cCI6MTYyMzQxNDE4OCwiYXVkIjoiQW55In0.haEtzSOyGVswi0CjfdZzKGHBdhTSc6KS-w5KV64kGGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/post/37",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"post",
+								"37"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddPost",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiMzhlYWMyMS1jMDcxLTRhZjUtYmE0ZC1jOTMxYmI3YjMzZjYiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTYyMzQxMzA1OCwiVXNlcklkIjoiMjIiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIyLFwiSWRlbnRpdHlcIjpcInN0ZWZhblwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzE2LDE3LDE4LDIwLDMwLDMxLDMyLDMzLDM1LDQyLDQzLDQ1LDQwMCwxMCwxMSwxMiwxMywxNCwyMiwyMywyNCwzNCw0NCw3MDAsNzAxXX0iLCJuYmYiOjE2MjM0MTMwNTgsImV4cCI6MTYyMzQxNDE4OCwiYXVkIjoiQW55In0.haEtzSOyGVswi0CjfdZzKGHBdhTSc6KS-w5KV64kGGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxYzc1NDIwNy0zNTY2LTQ5NzMtOWU5OS00OTc4YzdlMzYxNzYiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTU5MzYwOTczNCwiVXNlcklkIjoiMjMiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIzLFwiSWRlbnRpdHlcIjpcIlBlcmljXCIsXCJBbGxvd2VkVXNlQ2FzZXNcIjpbMTYsMTcsMTgsMjAsMzAsMzEsMzIsMzMsMzUsNDIsNDMsNDUsNDAwXX0iLCJuYmYiOjE1OTM2MDk3MzQsImV4cCI6MTU5MzYxMDg2NCwiYXVkIjoiQW55In0.bXNlao3sOrhsSQiiof-yJM36N8-08CCTWUSZxt9XC7w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Investitor: Prekidamo izgradnju u Bloku 37 dok se ne reši situacija\",\n    \"description\": \"Durst development doo Beograd, investitor objekta u Bloku 37 protiv čije izgradnje protestuju građani tog dela grada, saopštio je da obustavlja sve radove do daljeg.Kako se navodi u saopštenju te kompanije, oni to čine kao „izraz dobre volje prema Gradu Beogradu i stanarima Bloka 37“.\",\n    \"CategoryId\": 18\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePost",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/post/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"post",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePost",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiMzhlYWMyMS1jMDcxLTRhZjUtYmE0ZC1jOTMxYmI3YjMzZjYiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTYyMzQxMzA1OCwiVXNlcklkIjoiMjIiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIyLFwiSWRlbnRpdHlcIjpcInN0ZWZhblwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzE2LDE3LDE4LDIwLDMwLDMxLDMyLDMzLDM1LDQyLDQzLDQ1LDQwMCwxMCwxMSwxMiwxMywxNCwyMiwyMywyNCwzNCw0NCw3MDAsNzAxXX0iLCJuYmYiOjE2MjM0MTMwNTgsImV4cCI6MTYyMzQxNDE4OCwiYXVkIjoiQW55In0.haEtzSOyGVswi0CjfdZzKGHBdhTSc6KS-w5KV64kGGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3Mzc5ZDVjYy1hZTE1LTQ5ZWQtYmNkNy1lNGI1YTM5NGVmOTciLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTU5MzIyMTU3MiwiVXNlcklkIjoiOSIsIkFjdG9yRGF0YSI6IntcIklkXCI6OSxcIklkZW50aXR5XCI6XCJQYXZsZVwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzEsMTAsMzNdfSIsIm5iZiI6MTU5MzIyMTU3MiwiZXhwIjoxNTkzMjIxNzAyLCJhdWQiOiJBbnkifQ.s_ZvsSta956JE4W4Wxu824egbQfMrkw8f05FCfDPzSU",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Investitor: Prekidamo izgradnju u Bloku 37 dok se ne reši situacija\",\n    \"description\": \"Usled novonastale situacije oko započetih radova na izgradnji našeg objekta u Bulevaru Milutina Milankovića na Novom Beogradu, te uključenja i aktivnosti Grada Beograda u vezi sa aktuelnim dešavanjima, bez obzira na činjenicu što posedujemo urednu i važeću dokumentaciju za izvođenje radove (važeću građevinsku dozvolu, plaćen doprinos za uređenje građevinskog zemljišta i aktuelnu potvrdu o prijavi radova), a kao izraz dobre volje prema Gradu Beogradu i stanarima Bloka 37, počevši od danas, 11. juna 2021, investitor obustavlja sve radove do daljnjeg, odnosno do rešavanja opšte situacije“, zaključili su iz Durst development.\",\n    \"categoryId\": 19\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/post/37",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"post",
+								"37"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "AddComment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"commentText\": \"Kom1\",\n    \"postId\": 2,\n    \"ParentId\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:54167/api/comment",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "54167",
+							"path": [
+								"api",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteComment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:54167/api/comment/8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "54167",
+							"path": [
+								"api",
+								"comment",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AdminDeleteComment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:54167/api/comment/admin/9",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "54167",
+							"path": [
+								"api",
+								"comment",
+								"admin",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateComment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3Mzc5ZDVjYy1hZTE1LTQ5ZWQtYmNkNy1lNGI1YTM5NGVmOTciLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTU5MzIyMTU3MiwiVXNlcklkIjoiOSIsIkFjdG9yRGF0YSI6IntcIklkXCI6OSxcIklkZW50aXR5XCI6XCJQYXZsZVwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzEsMTAsMzNdfSIsIm5iZiI6MTU5MzIyMTU3MiwiZXhwIjoxNTkzMjIxNzAyLCJhdWQiOiJBbnkifQ.s_ZvsSta956JE4W4Wxu824egbQfMrkw8f05FCfDPzSU",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"CommentText\": \"Radi Sve\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:54167/api/comment/10",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "54167",
+							"path": [
+								"api",
+								"comment",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GetLogs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5NmI3MjY5MC03ZDcwLTQ4MmYtYWZiZS1iMDhjZDY1YmNlZjAiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTYyMzQxNDIyOCwiVXNlcklkIjoiMjIiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIyLFwiSWRlbnRpdHlcIjpcInN0ZWZhblwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzE2LDE3LDE4LDIwLDMwLDMxLDMyLDMzLDM1LDQyLDQzLDQ1LDQwMCwxMCwxMSwxMiwxMywxNCwyMiwyMywyNCwzNCw0NCw3MDAsNzAxXX0iLCJuYmYiOjE2MjM0MTQyMjgsImV4cCI6MTYyMzQxNTM1OCwiYXVkIjoiQW55In0.UGDOknWhLxdAs0J6-HR6I9iXB2M3EbysvEOdNlbrV9c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJmZTc2NGM0Yy1iNTU3LTQ4MzEtYmExOS1jM2FlZmMxZTU0NDciLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTU5MzUyMzQ2OSwiVXNlcklkIjoiMjgiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjI4LFwiSWRlbnRpdHlcIjpcImZsaXBweVwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzE2LDE3LDE4LDIwLDMwLDMxLDMyLDMzLDM1LDQyLDQzLDQ1LDQwMCwxMCwxMSwxMiwxMywxNCwyMiwyMywyNCwzNCw0NCw3MDAsNzAxXX0iLCJuYmYiOjE1OTM1MjM0NjksImV4cCI6MTU5MzUyNDU5OSwiYXVkIjoiQW55In0.wMPzpBo0oi0cCZe5CSnlWIN8R-FGe1ErM21C-VvwZjg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/Log?perpage=25&page=1&Actor=stefan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Log"
+					],
+					"query": [
+						{
+							"key": "perpage",
+							"value": "25"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "Actor",
+							"value": "stefan"
+						},
+						{
+							"key": "DateFrom",
+							"value": "2021-06-01",
+							"disabled": true
+						},
+						{
+							"key": "DateTo",
+							"value": "2021-06-10",
+							"disabled": true
+						},
+						{
+							"key": "UseCaseName",
+							"value": "Log",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contact",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiMzhlYWMyMS1jMDcxLTRhZjUtYmE0ZC1jOTMxYmI3YjMzZjYiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTYyMzQxMzA1OCwiVXNlcklkIjoiMjIiLCJBY3RvckRhdGEiOiJ7XCJJZFwiOjIyLFwiSWRlbnRpdHlcIjpcInN0ZWZhblwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzE2LDE3LDE4LDIwLDMwLDMxLDMyLDMzLDM1LDQyLDQzLDQ1LDQwMCwxMCwxMSwxMiwxMywxNCwyMiwyMywyNCwzNCw0NCw3MDAsNzAxXX0iLCJuYmYiOjE2MjM0MTMwNTgsImV4cCI6MTYyMzQxNDE4OCwiYXVkIjoiQW55In0.haEtzSOyGVswi0CjfdZzKGHBdhTSc6KS-w5KV64kGGU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzODcxMjUwYy1jODA0LTQ0MDgtOTcyOC1hZWVmNzAwNTVmMTUiLCJpc3MiOiJibG9nX2FwaSIsImlhdCI6MTU5MzIxNDI2NCwiVXNlcklkIjoiOSIsIkFjdG9yRGF0YSI6IntcIklkXCI6OSxcIklkZW50aXR5XCI6XCJVc2VyMlwiLFwiQWxsb3dlZFVzZUNhc2VzXCI6WzEsMiwzLDMyXX0iLCJuYmYiOjE1OTMyMTQyNjQsImV4cCI6MTU5MzIxNDM5NCwiYXVkIjoiQW55In0.H7f5tMdn1aOpP9U_du6xTOg1op92qihg2btfZhStuMM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Content\": \"TestTestTest\",\n    \"SendFrom\": \"zika@gmail.com\",\n    \"Subject\": \"Ovo je naslov\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"contact"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
